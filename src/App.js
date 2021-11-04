@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import Products from './components/Products';
 import Home from './components/Home';
@@ -12,25 +13,27 @@ import {
 import './App.css'; 
 import Header from './components/Header';
 import { useHistory } from 'react-router-dom';
+import ProductDetail from './components/ProductDeatil';
 
 function App() {
-  const [prodName, setProdName] = useState('');
-  const [prodDes, setProdDes] = useState('');
-  const [productsList, setProductsList] = useState([]);
+
 
   return (
     <Router>
     <div className="App">
-     <Header  productsList={productsList , prodName, prodDes , setProdName , setProdDes, productsList, setProductsList}/>
+     <Header/>
      <Switch>
        <Route exact path="/">
-         <Home productsList={productsList}/>
+         <Home/>
        </Route>
       <Route path="/products">
-        <Products productsList={productsList}/>
+        <Products/>
       </Route> 
       <Route path="/add-products">
-        <AddProducts prodName={prodName} prodDes={prodDes} setProdName={setProdName} setProdDes={setProdDes} productsList={productsList} setProductsList={setProductsList}/>
+        <AddProducts/>
+      </Route>  
+      <Route path="/product-detail/:id">
+        <ProductDetail/>
       </Route>        
         </Switch>
        

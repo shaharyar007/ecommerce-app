@@ -21,12 +21,7 @@ const Header = ({productsList}) => {
       <div className="navbar-nav">
         <a className="nav-link active" aria-current="page" href="#"><Link to="/">Home</Link></a>
         <a  href="#" className="nav-link" ><Link to='/products'>Products</Link></a>
-             <a href="#" className="nav-link"><Link to={
-                 {
-                     pathname : '/add-products',
-                     state: 'prodName, prodDes , setProdName , setProdDes, productsList, setProductsList'
-                 }
-             }>Add Products</Link></a>
+             <a href="#" className="nav-link"><Link to='/add-products'>Add Products</Link></a>
       </div>
     </div>
   </div>

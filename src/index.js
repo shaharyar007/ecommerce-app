@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
+import { StoreProvider } from './storeContext';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <StoreProvider>
     <App />
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

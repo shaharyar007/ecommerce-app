@@ -64,8 +64,10 @@ a:hover{
   overflow: hidden;
   border-radius: 20px;
   min-height: 330px;
+  background-color: #00000085;
 
 }
+
 @media (max-width: 768px) {
   .card {
     min-height: 350px;
@@ -111,10 +113,14 @@ a:hover{
   background: none;
   border-top: none;
   position: absolute;
-  bottom: 22px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  top: 0;
+  z-index: -1;
 }
 .card .card-footer .media img {
-  border: solid 3px rgba(234, 95, 0, 0.3);
+
 }
 .card .card-meta {
   color: orange;
@@ -134,4 +140,84 @@ a:hover{
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
   background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #455f71 100%);
+}
+.media-body {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Product Detail Page */
+.card {
+  border: none
+}
+
+.product {
+  background-color: red;
+}
+
+.brand {
+  font-size: 13px
+}
+
+.act-price {
+  color: red;
+  font-weight: 700
+}
+
+.dis-price {
+  text-decoration: line-through
+}
+
+.about {
+  font-size: 14px
+}
+
+.color {
+  margin-bottom: 10px
+}
+
+label.radio {
+  cursor: pointer
+}
+
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none
+}
+
+label.radio span {
+  padding: 2px 9px;
+  border: 2px solid #ff0000;
+  display: inline-block;
+  color: #ff0000;
+  border-radius: 3px;
+  text-transform: uppercase
+}
+
+label.radio input:checked+span {
+  border-color: #ff0000;
+  background-color: #ff0000;
+  color: #fff
+}
+
+.btn-danger {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important
+}
+
+.btn-danger:hover {
+  background-color: #da0606 !important;
+  border-color: #da0606 !important
+}
+
+.btn-danger:focus {
+  box-shadow: none
+}
+
+.cart i {
+  margin-right: 10px
 }
