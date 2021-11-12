@@ -12,6 +12,7 @@ import {
 
 const Products = () => {
   const products = useContext(storeContext);
+  console.log(products);
 
   return(
       <div className="container">
@@ -32,6 +33,7 @@ const Products = () => {
                 <th>Name</th>
                 <th>Date</th>
                 <th>Description</th>
+                <th>Price</th>
                 <th>Image</th>
               </thead>
               <tbody>
@@ -43,6 +45,7 @@ const Products = () => {
       <td >{ products.productsList[item].name }</td>
       <td >{ products.productsList[item].date }</td>
       <td>{ products.productsList[item].description}</td>
+      <td>{ products.productsList[item].price}</td>
       <td><img src={ products.productsList[item].image}  width="30px" height="30px"></img></td>
       </tr>
     ))

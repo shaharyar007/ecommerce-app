@@ -25,7 +25,7 @@ const Home = () => {
     Object.keys(products.productsList).map((item, i) => (      
         <div className="card col-3 mx-2 border text-start" key={i}>
         <a className="card-body"><Link to={`/product-detail/${products.productsList[item].id}`}>
-          <small className="card-meta mb-2">Thought Leadership</small>
+          <h4 className="card-meta mb-2">${products.productsList[item].price}</h4>
           <h5 className="card-title mt-0 text-white">{ products.productsList[item].name }</h5>
           <small className="text-white"><i className="far fa-clock text-white"></i>{products.productsList[item].date}</small>
           <p className="card-text text-white">{products.productsList[item].description}</p>

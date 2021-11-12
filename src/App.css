@@ -221,3 +221,21 @@ label.radio input:checked+span {
 .cart i {
   margin-right: 10px
 }
+.prod_row{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 25px;
+}
+.prod_row > div{
+  width: 100%;
+  text-align: left;
+}
+.cart_number{
+  width: 15px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: sub;
+    font-size: 20px
+}

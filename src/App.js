@@ -12,7 +12,6 @@ import {
 } from "react-router-dom";
 import './App.css'; 
 import Header from './components/Header';
-import { useHistory } from 'react-router-dom';
 import ProductDetail from './components/ProductDeatil';
 
 function App() {

@@ -6,7 +6,7 @@ import { storeContext } from '../storeContext';
 const AddProducts = () => {
     const user = useContext(storeContext);
 
-    var text,des,imgUrl;
+    var text,des,imgUrl,prodPrice;
     const nameHandler =(e)=>{
          text = e.target.value;
          user.setProdName(text);
@@ -16,18 +16,23 @@ const AddProducts = () => {
          des = e.target.value;
          user.setProdDes(des);
     }
+    const priceHandler=(e)=>{
+        prodPrice = e.target.value;
+        user.setProdPrice(prodPrice);
+   }
    const submitHandler=(e)=>{
        e.preventDefault();
        var d = new Date();
        var datei = d.toLocaleTimeString();
        user.setProductsList([
            ...user.productsList,
-           { name: user.prodName , description: user.prodDes , image: user.prodImg , id: Math.random()*1000 , date: datei
+           { name: user.prodName , description: user.prodDes , image: user.prodImg , id: Math.random()*1000 , date: datei , price:user.prodPrice
            }
        ])
        user.setProdName('');
        user.setProdDes('');
        user.setProdImg('');
+       user.setProdPrice('');
    }
     const imgHandler = (e) => {
         var reader = new FileReader();
@@ -54,11 +59,15 @@ const AddProducts = () => {
         <form>
         <div className="mb-3">
             <label className="form-label">Name</label>
-            <input type="text" className="form-control" onChange={nameHandler} value={user.prodName}></input>          
+            <input type="text" className="form-control" onChange={nameHandler} value={user.prodName} placeholder="Name"></input>          
         </div>
         <div className="mb-3">
             <label className="form-label">Description</label>
-            <input type="text" className="form-control" onChange={desHandler} value={user.prodDes}></input>
+            <input type="text" className="form-control" onChange={desHandler} value={user.prodDes} placeholder="Description"></input>
+        </div>
+        <div className="mb-3">
+            <label className="form-label">Price</label>
+            <input type="text" className="form-control" onChange={priceHandler} value={user.prodPrice} placeholder="$0.00"></input>
         </div>
         <div className="mb-3">
             <label className="form-label">Upload Product Image</label>
