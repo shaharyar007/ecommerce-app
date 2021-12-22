@@ -26,7 +26,7 @@ const AddProducts = () => {
        var datei = d.toLocaleTimeString();
        user.setProductsList([
            ...user.productsList,
-           { name: user.prodName , description: user.prodDes , image: user.prodImg , id: Math.random()*1000 , date: datei , price:user.prodPrice
+           { name: user.prodName , description: user.prodDes , image: user.prodImg , id: Math.random()*1000 ,  date: datei , price:user.prodPrice
            }
        ])
        user.setProdName('');

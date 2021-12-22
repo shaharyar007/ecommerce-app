@@ -9,7 +9,7 @@ export const StoreProvider = ({ children }) => {
    const [prodDate , setProdDate] = useState('');
    const [prodPrice , setProdPrice] = useState('');
    const [productsList, setProductsList] = useState([]);
-   const [CartList, setCartList] = useState(['']);
+   const [CartList, setCartList] = useState([]);
    return(
        <storeContext.Provider
        value={{

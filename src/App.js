@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import Products from './components/Products';
@@ -13,6 +13,7 @@ import {
 import './App.css'; 
 import Header from './components/Header';
 import ProductDetail from './components/ProductDeatil';
+import EditProduct from './components/EditProduct';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
       </Route>  
       <Route path="/product-detail/:id">
         <ProductDetail/>
+      </Route> 
+      <Route path="/edit-product/:id">
+        <EditProduct/>
       </Route>        
         </Switch>
        

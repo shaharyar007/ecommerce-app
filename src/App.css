@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -62,9 +62,7 @@ a:hover{
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
-  border-radius: 20px;
   min-height: 330px;
-  background-color: #00000085;
 
 }
 
@@ -152,10 +150,6 @@ a:hover{
   border: none
 }
 
-.product {
-  background-color: red;
-}
-
 .brand {
   font-size: 13px
 }
@@ -221,21 +215,67 @@ label.radio input:checked+span {
 .cart i {
   margin-right: 10px
 }
-.prod_row{
+/* .prod_row{
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   margin: 25px;
-}
-.prod_row > div{
+} */
+/* .prod_row > div{
   width: 100%;
   text-align: left;
-}
+} */
 .cart_number{
-  width: 15px;
-    height: 14px;
+    width: 15px;
     display: inline-block;
     vertical-align: middle;
     vertical-align: sub;
-    font-size: 20px
+    font-size: 16px;
+    font-weight: 400;
 }
+.nav-link{
+  display: inline;
+}
+.cart_wrapper{
+  display: none;
+  background: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  position: absolute;
+  border: 0;
+  right: 0;
+  border: 1px solid #ddd;
+}
+
+.cart_menu:hover .cart_wrapper{
+  display: block;
+  z-index: 11;
+}
+
+.cart_wrapper table td, .cart_wrapper table th {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+.cart_remove a {
+  position: absolute;
+  top: -10px;
+  left: -4px;
+  font-size: 15px;
+  color: red;
+}
+.cart_remove a i , .remove_prod i , .edit_prod i{
+  pointer-events: none;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.cart_remove a:hover i , .remove_prod:hover i , .edit_prod:hover i{
+    color: initial;
+}
+.cart_remove {
+  position: relative;
+}
+.remove_prod{
+  padding-right: 10px;
+}
+

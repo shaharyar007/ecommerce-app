@@ -20,7 +20,7 @@ const Home = () => {
           <div className="col-8 text-start"><b><h5>Total no. of products <span className="badge bg-secondary">{products.productsList.length}</span></h5></b> </div>
           {/* <div className="col-4"> <button className="btn btn-outline-primary" type="button"><Link to="/add-products">Add Products</Link></button></div> */}
         </div>
-      <div className="row g-4">
+      <div className="row g-5">
         { 
     Object.keys(products.productsList).map((item, i) => (      
         <div className="card col-3 mx-2 border text-start" key={i}>
@@ -29,10 +29,10 @@ const Home = () => {
           <h5 className="card-title mt-0 text-white">{ products.productsList[item].name }</h5>
           <small className="text-white"><i className="far fa-clock text-white"></i>{products.productsList[item].date}</small>
           <p className="card-text text-white">{products.productsList[item].description}</p>
-          <div className="media-body">
+          {/* <div className="media-body">
           <h6 className="my-0 text-white d-block text-white">Category</h6>
           <small className="text-white">Director of UI/UX</small>
-        </div>
+        </div> */}
           <div className="card-footer">
            <div className="media">
       <img className="mr-3 w-100" src={products.productsList[item].image} alt="Generic placeholder image"/>
